@@ -1,0 +1,3 @@
+# CRON_TIMES=10,25,40,55
+# UCMSP1 
+nafpdb108:10.173.79.68:/vol/arch_ucmsp1/ucmsp1 nstpdb202:/vol/ndmp_arch_ucmsp1/ucmsp1

@@ -14,5 +14,6 @@ You need to install SnapCreator framework first and this is just its extension. 
 ##### Example:
 ```
 /vol/saptdms_arch       -sec=sys,rw=@wnadm:10.173.73.1,root=@wnadm:10.173.73.1
--       vol option \<archlog volume> nosnapdir on
+-       vol option <archlog volume> nosnapdir on
 ```
+

@@ -11,6 +11,7 @@ You need to install SnapCreator framework first and this is just its extension. 
 
 #### Volume prerequisities:
 -       volumes (on online and on nearstore) exported to SnapCreator server storage IP address
+
 ##### Example:
 ```
 /vol/saptdms_arch       -sec=sys,rw=@wnadm:10.173.73.1,root=@wnadm:10.173.73.1

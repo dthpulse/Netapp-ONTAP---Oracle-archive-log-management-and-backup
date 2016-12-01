@@ -5,9 +5,14 @@ You need to install SnapCreator framework first and this is just its extension. 
 
 ### ARCHIVELOG management on SnapCreator Framework
 #### Filer prerequisities:
--       VLAN for DMZ: 1824
--       VLAN for intranet: 1818
--       VLAN for SGP DMZ: 643
 -       ndmp access need to be granted
 -       ndmpd.tcpwinsize             65536
-- enable sis on nearstore + on polly
+- enable sis on nearstores
+
+#### Volume prerequisities:
+-       volumes (on online and on nearstore) exported to SnapCreator server storage IP address
+##### Example:
+```
+/vol/saptdms_arch       -sec=sys,rw=@wnadm:10.173.73.1,root=@wnadm:10.173.73.1
+-       vol option \<archlog volume> nosnapdir on
+```

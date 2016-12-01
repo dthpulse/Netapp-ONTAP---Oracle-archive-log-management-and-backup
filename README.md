@@ -136,9 +136,11 @@ This is always required. If you need to define anything more you can use undersc
 **Supported retentions are now 28days and 42 days.**
 **Configuration file input:**
 -       line above the ndmp relation the instance name has to be specified - separated by space from the comment
--       syntax is:
+- syntax is:
 
-    <filer name>:<vfiler IP address in SnapCreator vlan>:<path to qtree> <nearstore name>:<path to qtree>
+---
+
+ filer_name:vfiler_IP_address_in_SnapCreator_vlan:path_to_qtree         nearstore_name:path_to_qtree
 
 ---
 
@@ -174,11 +176,11 @@ Cron entry willl look like this then (every 15 minutes starting from 5th minute)
 It is always better if you need to add new backup relation to add it to the separate configuration file with _ignore first and run the script against this configuration manually to check if everything will pass.
 
 **Archivelog framework initial setup:**
--       unpack the ARCHIVELOGS_FRAMEWORK.tgz package
--       run initial setup
-
+- unpack the ARCHIVELOGS_FRAMEWORK.tgz package
+- run initial setup
+```
     $  archivelogs_backup.sh -s
-
+```
 You can run the script without the option to get the basic help:
 
     $ archivelogs_backup.sh
@@ -222,8 +224,9 @@ named:
 -          online snapshot failed- Script exited and has disabled the faulty instance in configuration file to avoid it from the next scheduled run
 -       PRIO 1 Archivelogs ndmp backup job has failed. Log is `<logfile name>`
 -          ndmp transfer failed. Script exited and has disabled the faulty instance in configuration file to avoid it from the next scheduled run
--       ARCHIVELOGS job has failed `<config name>`
--          job has failed. For the cause you have to look to
+-       ARCHIVELOGS job has failed `<config name>`       
+
+job has failed. For the cause you have to look to
 
     manual_ndmp_<config file name>.out.<date string>.log
     manual_ndmp_<config file name>.error.<same date string as out log>.log
